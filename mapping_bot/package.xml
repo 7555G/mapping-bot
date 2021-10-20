@@ -3,7 +3,7 @@
   <name>mapping_bot</name>
   <version>1.0.0</version>
   <description>
-    Metapackage containing packages for a 4-wheeled skid-steer drive bot that maps its environment using RTAB-Map.
+    Package for spawning a 4-wheeled skid-steer drive bot inside a Gazebo environment.
   </description>
 
   <author email="gsotirch@gmail.com">George Sotirchos</author>
@@ -12,7 +12,4 @@
   <url type="website">https://github.com/7555G/mapping-bot</url>
 
   <buildtool_depend>catkin</buildtool_depend>
-  <depend>my_robot</depend>
-  <depend>surveyor</depend>
-  <depend>mapping</depend>
 </package>
