@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
   <!-- Arguments for launch file with defaults provided -->
-  <arg name="database_path"     default="rtabmap.db"/>
+  <arg name="database_path"     default="databases/rtabmap.db"/>
   <arg name="rgb_topic"         default="/rgb/image_raw"/>
   <arg name="depth_topic"       default="/depth/image_raw"/>
   <arg name="camera_info_topic" default="/rgb/camera_info"/>  
