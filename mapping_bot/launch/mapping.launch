@@ -37,7 +37,7 @@
       <param name="Vis/FeatureType" type="string" value="0"/>
 
       <!-- Maximum visual words per image (bag-of-words) -->
-      <param name="Kp/MaxFeatures" type="string" value="700"/>
+      <param name="Kp/MaxFeatures" type="string" value="800"/>
 
       <!-- Used to extract more or less SURF features -->
       <param name="SURF/HessianThreshold" type="string" value="150"/>
@@ -47,7 +47,7 @@
       <param name="Reg/Strategy" type="string" value="0"/>
 
       <!-- Minimum visual inliers to accept loop closure -->
-      <param name="Vis/MinInliers" type="string" value="20"/>
+      <param name="Vis/MinInliers" type="string" value="15"/>
 
       <!-- Set to false to avoid saving data when robot is not moving -->
       <param name="Mem/NotLinkedNodesKept" type="string" value="false"/>
@@ -58,7 +58,6 @@
       <param name="Mem/RecentWmRatio" type="string" value="0.1"/>
       <param name="Rtabmap/LoopThr" type="string" value="0.15"/>
       <param name="Rtabmap/LoopRatio" type="string" value="0.6"/>
-      <!--<param name="RGBD/ProximityMaxGraphDepth" type="string" value="15"/>-->
     </node>
 
     <!-- visualization with rtabmapviz -->
