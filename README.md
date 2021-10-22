@@ -77,7 +77,7 @@ Now, continue with the instructions from the [Building](#building) section.
 2. Start the `teleop_switch_keyboard` node:
 
     ``` bash
-    roslaunch mapping_bot teleop.launch:
+    roslaunch mapping_bot teleop.launch
     ```
 
 3. Start the `rtabmap` and `rtabmapviz` nodes in SLAM mode:
