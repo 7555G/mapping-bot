@@ -15,7 +15,7 @@ The mapping-bot package has been tested under [ROS](https://www.ros.org) Kinetic
 
 ![Example image](media/rtabmap.jpg)
 
-The generated database file containing the above graph can be downloaded from the following link:<br/>
+The generated database file (~500MB) containing the above graph can be downloaded from the following link:<br/>
 https://drive.google.com/file/d/1b5pvZWY5gWn9cGNwS4kvx6GS7iLyPiKr/view?usp=sharing
 
 **Note**: the numbered white cubes are not detected by the laser scan because their models contained no `<collision>` elements.
