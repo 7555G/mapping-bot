@@ -15,6 +15,9 @@ The mapping-bot package has been tested under [ROS](https://www.ros.org) Kinetic
 
 ![Example image](media/rtabmap.jpg)
 
+The generated database file containing the above graph can be downloaded from the following link:<br/>
+https://drive.google.com/file/d/1b5pvZWY5gWn9cGNwS4kvx6GS7iLyPiKr/view?usp=sharing
+
 **Note**: the numbered white cubes are not detected by the laser scan because their models contained no `<collision>` elements.
 
 ## Installation
@@ -27,7 +30,7 @@ The mapping-bot package has been tested under [ROS](https://www.ros.org) Kinetic
 
 #### Building
 
-To build from source, with ROS Kinetic on Ubuntu 16.04, clone the latest version from this repository into your catkin workspace and compile the package using
+To build from source, with ROS Kinetic on Ubuntu 16.04, clone the latest version from this repository into your catkin workspace and compile the package with the following commands:
 
 ``` bash
 mkdir -p /catkin_ws/src
@@ -36,6 +39,7 @@ git clone https://github.com/7555G/mapping-bot
 cd ../
 rosdep install --from-paths . --ignore-src
 catkin_make
+# place the downloaded database file at ./src/mapping-bot/mapping_bot/databases/rtabmap.db
 ```
 
 ### Running in Docker
@@ -94,7 +98,7 @@ Now, continue with the instructions from the [Building](#building) section.
 
 * **mapping_bot/launch/mapping.launch:** Starts the `rtabmap` node for *SLAM*, and the `rtabmapviz` node for visualization.
 
-* **surveyor/launch/localization.launch**: Starts the `rtabmap` node for *localization*, and the `rviz` node for visualization.
+* **mapping_bot/launch/localization.launch**: Starts the `rtabmap` node for *localization*, and the `rviz` node for visualization.
 
 ## Nodes
 
