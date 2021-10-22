@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
   <!-- Arguments for launch file with defaults provided -->
-  <arg name="database_path"     default="rtabmap.db"/>
+  <arg name="database_path"     default="databases/rtabmap.db"/>
   <arg name="rgb_topic"         default="/rgb/image_raw"/>
   <arg name="depth_topic"       default="/depth/image_raw"/>
   <arg name="camera_info_topic" default="/rgb/camera_info"/>  
@@ -30,11 +30,11 @@
 
       <!-- 2D SLAM -->
       <param name="Reg/Force3DoF" type="string" value="true"/>
-      <param name="Optimizer/Slam2D" value="true"/>
 
       <!-- Loop Closure Detection -->
       <!-- 0=SURF 1=SIFT 2=ORB 3=FAST/FREAK 4=FAST/BRIEF 5=GFTT/FREAK 6=GFTT/BRIEF 7=BRISK 8=GFTT/ORB 9=KAZE -->
       <param name="Kp/DetectorStrategy" type="string" value="0"/>
+      <param name="Vis/FeatureType" type="string" value="0"/>
 
       <!-- Maximum visual words per image (bag-of-words) -->
       <param name="Kp/MaxFeatures" type="string" value="400"/>
@@ -49,20 +49,14 @@
       <!-- Minimum visual inliers to accept loop closure -->
       <param name="Vis/MinInliers" type="string" value="15"/>
 
+      <!-- Localization mode -->
       <param name="Mem/IncrementalMemory" type="string" value="false"/>
       <param name="Mem/InitWMWithAllNodes" type="string" value="true"/>
-    </node>
 
-    <!-- visualization with rtabmapviz -->
-    <node pkg="rtabmap_ros" type="rtabmapviz" name="rtabmapviz" args="-d $(find rtabmap_ros)/launch/config/rgbd_gui.ini" output="screen">
-      <param name="subscribe_depth" type="bool"   value="true"/>
-      <param name="subscribe_scan"  type="bool"   value="true"/>
-      <param name="frame_id"        type="string" value="base_link"/>
-
-      <remap from="rgb/image"       to="$(arg rgb_topic)"/>
-      <remap from="depth/image"     to="$(arg depth_topic)"/>
-      <remap from="rgb/camera_info" to="$(arg camera_info_topic)"/>
-      <remap from="scan"            to="/scan"/>
+      <param name="Grid/FromDepth" type="string" value="false"/>
     </node>
   </group>
+
+  <!--launch rviz-->
+  <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(find mapping_bot)/launch/config.rviz"/>
 </launch>
