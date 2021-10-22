@@ -80,13 +80,13 @@ Now, continue with the instructions from the [Building](#building) section.
     roslaunch mapping_bot teleop.launch
     ```
 
-3. Start the `rtabmap` and `rtabmapviz` nodes in SLAM mode:
+3. Start the `rtabmap` and `rtabmapviz` nodes in *SLAM* mode:
 
     ``` bash
     roslaunch mapping_bot mapping.launch
     ```
 
-   Alternatively, start the `rtabmap` and `rtabmapviz` nodes in localization mode:
+   Alternatively, start the `rtabmap` and `rtabmapviz` nodes in *localization* mode:
 
     ``` bash
     roslaunch mapping_bot localization.launch
