@@ -108,7 +108,7 @@ Following are the `rtabmap`'s published and subscribed topics of main interest f
 
 #### Published Topics
 
-* **`/map`** ([sensor_msgs/LaserScan](http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/LaserScan.html))
+* **`/map`** ([nav_msgs/OccupancyGrid](http://docs.ros.org/en/api/nav_msgs/html/msg/OccupancyGrid.html))
 
     Mapping Occupancy grid generated with laser scans. Remapped from `grid_map`.
 
@@ -118,14 +118,14 @@ Following are the `rtabmap`'s published and subscribed topics of main interest f
 
     Image from the camera. Remapped from `rgb/image`.
 
-* **`/rgb/camera_info`** ([sensor_msgs/Image](http://docs.ros.org/en/api/sensor_msgs/html/msg/Image.html))
+* **`/rgb/camera_info`** ([sensor_msgs/CameraInfo](http://docs.ros.org/en/api/sensor_msgs/html/msg/CameraInfo.html))
 
     RGB Camera metadata.
 * **`/depth/image_raw`** ([sensor_msgs/Image](http://docs.ros.org/en/api/sensor_msgs/html/msg/Image.html))
 
     Depth measurements from the camera. Remapped from `depth/image`.
 
-* **`/scan`** ([sensor_msgs/Image](http://docs.ros.org/en/api/sensor_msgs/html/msg/Image.html))
+* **`/scan`** ([sensor_msgs/LaserScan](http://docs.ros.org/en/api/sensor_msgs/html/msg/LaserScan.html))
 
     Laser scan stream. Remapped from `scan`.
 
