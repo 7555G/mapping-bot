@@ -100,6 +100,14 @@ Now, continue with the instructions from the [Building](#building) section.
 
 * **mapping_bot/launch/localization.launch**: Starts the `rtabmap` node for *localization*, and the `rviz` node for visualization.
 
+     Arguments:
+
+     - **`rviz`**: Whether to launch an RViz window.<br/>
+        Default: `true`
+
+     - **`move_base`**: Whether to start a `move_base` node.<br/>
+        Default: `false`
+
 ## Nodes
 
 ### rtabmap

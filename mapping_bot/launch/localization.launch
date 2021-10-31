@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
+  <!-- arg: Launch RViz -->
+  <arg name="rviz" default="true" doc="Whether to launch an RViz window."/>
+
+  <!-- arg: Launch move_base -->
+  <arg name="move_base" default="false" doc="Whether to start a move_base node."/>
+
   <!-- Arguments for launch file with defaults provided -->
   <arg name="database_path"     default="databases/rtabmap.db"/>
   <arg name="rgb_topic"         default="/rgb/image_raw"/>
   <arg name="depth_topic"       default="/depth/image_raw"/>
-  <arg name="camera_info_topic" default="/rgb/camera_info"/>  
+  <arg name="camera_info_topic" default="/rgb/camera_info"/>
 
   <!-- Mapping Node -->
   <group ns="rtabmap">
@@ -57,6 +63,22 @@
     </node>
   </group>
 
-  <!--launch rviz-->
-  <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(find mapping_bot)/launch/config.rviz"/>
+  <!-- Launch RViz -->
+  <group if="$(arg rviz)">
+    <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(find mapping_bot)/launch/config.rviz"/>
+  </group>
+
+  <!-- Launch move_base -->
+  <group if="$(arg move_base)">
+    <node name="move_base" pkg="move_base" type="move_base" respawn="false" output="screen">
+      <param name="base_global_planner" value="navfn/NavfnROS"/>
+      <param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS"/>
+
+      <rosparam file="$(find mapping_bot)/config/costmap_common_params.yaml" command="load" ns="global_costmap"/>
+      <rosparam file="$(find mapping_bot)/config/costmap_common_params.yaml" command="load" ns="local_costmap"/>
+      <rosparam file="$(find mapping_bot)/config/local_costmap_params.yaml" command="load"/>
+      <rosparam file="$(find mapping_bot)/config/global_costmap_params.yaml" command="load"/>
+      <rosparam file="$(find mapping_bot)/config/base_local_planner_params.yaml" command="load"/>
+    </node>
+  </group>
 </launch>
