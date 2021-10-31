@@ -10,10 +10,10 @@
       <rightFrontJoint>front_right_wheel_joint</rightFrontJoint>
       <leftRearJoint>back_left_wheel_joint</leftRearJoint>
       <rightRearJoint>back_right_wheel_joint</rightRearJoint>
-      <wheelSeparation>0.15</wheelSeparation>
+      <wheelSeparation>0.29</wheelSeparation>
       <wheelDiameter>0.14</wheelDiameter>
       <robotBaseFrame>base_link</robotBaseFrame>
-      <torque>20</torque>
+      <torque>40</torque>
       <covariance_x>0.0001</covariance_x>
       <covariance_y>0.0001</covariance_y>
       <covariance_yaw>0.01</covariance_yaw>
