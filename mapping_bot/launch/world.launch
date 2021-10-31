@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
-  <!-- send urdf to param server -->
-  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find mapping_bot)/urdf/my_robot.xacro'" />
+  <!-- Send urdf to param server -->
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find mapping_bot)/urdf/my_robot.xacro'"/>
 
   <!-- Robot pose -->
   <arg name="x" default="0.5"/>
@@ -10,9 +10,6 @@
   <arg name="roll" default="0"/>
   <arg name="pitch" default="0"/>
   <arg name="yaw" default="-1.5707"/>
-
-  <!--<arg name="x" default="4"/>-->
-  <!--<arg name="yaw" default="0"/>-->
 
   <!-- Launch other relevant files-->
   <include file="$(find mapping_bot)/launch/robot_description.launch"/>
