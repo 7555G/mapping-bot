@@ -26,7 +26,7 @@ https://drive.google.com/file/d/1b5pvZWY5gWn9cGNwS4kvx6GS7iLyPiKr/view?usp=shari
 
 #### Dependencies
 
-- [ros-kinetic](http://wiki.ros.org),
+- [ros-kinetic](http://wiki.ros.org)
 - [ros-kinetic-rtabmap-ros](http://wiki.ros.org/rtabmap_ros)
 - [ros-kinetic-move-base](http://wiki.ros.org/move_base)
 - [ros-kinetic-teleop-twist-keyboard](http://wiki.ros.org/teleop_twist_keyboard)
@@ -145,6 +145,6 @@ Following are the `rtabmap`'s published and subscribed topics of main interest f
 Please report bugs and request features using the [Issue Tracker](https://github.com/7555G/mapping-bot/issues).
 
 ROS: http://www.ros.org<br/>
-rtab-map's ros package: https://github.com/introlab/rtabmap_ros
-move_base ROS package (ROS Navigation stack): https://github.com/ros-planning/navigation
-teleop_twist_keyboard ROS package: https://github.com/ros-teleop/teleop_twist_keyboard<br/>
+rtab-map's ros package: https://github.com/introlab/rtabmap_ros<br/>
+move_base ROS package (ROS Navigation stack): https://github.com/ros-planning/navigation<br/>
+teleop_twist_keyboard ROS package: https://github.com/ros-teleop/teleop_twist_keyboard
