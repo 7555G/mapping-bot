@@ -145,6 +145,6 @@ Following are the `rtabmap`'s published and subscribed topics of main interest f
 Please report bugs and request features using the [Issue Tracker](https://github.com/7555G/mapping-bot/issues).
 
 ROS: http://www.ros.org<br/>
-rtab-map's ros package: https://github.com/introlab/rtabmap_ros<br/>
+RTAB-Map's ROS package: https://github.com/introlab/rtabmap_ros<br/>
 move_base ROS package (ROS Navigation stack): https://github.com/ros-planning/navigation<br/>
 teleop_twist_keyboard ROS package: https://github.com/ros-teleop/teleop_twist_keyboard
