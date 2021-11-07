@@ -77,7 +77,7 @@ Now, continue with the instructions from the [Building](#building) section.
     roslaunch mapping_bot world.launch
     ```
 
-2. Start the `teleop_switch_keyboard` node:
+2. Start the `teleop_twist_keyboard` node:
 
     ``` bash
     roslaunch mapping_bot teleop.launch
