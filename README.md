@@ -3,7 +3,7 @@
 ## Overview
 
 This repository contains the following package:
-* **mapping_bot**: A 4-wheeled skid-steer drive robot equipped with a camera and a Hokuyo lidar in a Gazebo environment. The generated graph is stored inside the `databases` directory and can be used afterwards for localization. `rtabmapviz` is used for visualization during SLAM, while `rviz` is used during localization. The robot is controlled with the [`teleop_twist_keyboard`](https://github.com/ros-teleop/teleop_twist_keyboard) package.
+* **mapping_bot**: A 4-wheeled skid-steer drive robot equipped with a RGBD camera and a Hokuyo lidar in a Gazebo environment. The generated graph is stored inside the `databases` directory and can be used afterwards for localization. `rtabmapviz` is used for visualization during SLAM, while `rviz` is used during localization. The robot is controlled with the `teleop_twist_keyboard` package.
 
 ### License
 
@@ -97,11 +97,11 @@ Now, continue with the instructions from the [Building](#building) section.
 
 ## Launch files
 
-* **mapping_bot/launch/world.launch:** A Gazebo simulation is opened and a 4-wheeled skid-steer drive robot equipped with an RGBD camera and a Hokuyo lidar is spawned in an office environment.
+* [**mapping_bot/launch/world.launch**](mapping_bot/launch/world.launch): A Gazebo simulation is opened and a 4-wheeled skid-steer drive robot equipped with an RGBD camera and a Hokuyo lidar is spawned in an office environment.
 
-* **mapping_bot/launch/mapping.launch:** Starts the `rtabmap` node for *SLAM*, and the `rtabmapviz` node for visualization.
+* [**mapping_bot/launch/mapping.launch**](mapping_bot/launch/mapping.launch): Starts the `rtabmap` node for *SLAM*, and the `rtabmapviz` node for visualization.
 
-* **mapping_bot/launch/localization.launch**: Starts the `rtabmap` node for *localization*, and the `rviz` node for visualization.
+* [**mapping_bot/launch/localization.launch**](mapping_bot/launch/localization.launch): Starts the `rtabmap` node for *localization*, and the `rviz` node for visualization.
 
      Arguments:
 
