@@ -38,7 +38,7 @@ To build from source, with ROS Kinetic on Ubuntu 16.04, clone the latest version
 ``` bash
 mkdir -p /catkin_ws/src
 cd catkin_ws/src
-git clone https://github.com/7555G/mapping-bot
+git clone https://github.com/gsotirchos/mapping-bot
 cd ../
 rosdep install --from-paths . --ignore-src
 catkin_make
@@ -142,7 +142,7 @@ Following are the `rtabmap`'s published and subscribed topics of main interest f
 
 ## Bugs & Feature Requests
 
-Please report bugs and request features using the [Issue Tracker](https://github.com/7555G/mapping-bot/issues).
+Please report bugs and request features using the [Issue Tracker](https://github.com/gsotirchos/mapping-bot/issues).
 
 ROS: http://www.ros.org<br/>
 RTAB-Map's ROS package: https://github.com/introlab/rtabmap_ros<br/>
